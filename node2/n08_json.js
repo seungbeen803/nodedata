@@ -18,5 +18,6 @@ user.job = 'developer';
 user.nation = 'korea';
 console.log(user);
 
+// '필드명'
 const fieldName = 'age';
 console.log(user[fieldName]);
