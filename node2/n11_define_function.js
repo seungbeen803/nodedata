@@ -20,7 +20,5 @@ printBye();
 // -> 인자 arg1, arg2를 받는 함수 func이 만들어짐.
 // func는 화살표 우측의 표현식을 평가하고 결과를 반환.
 
-let sum = (a, b) => {
-  return a + b;
-}
+let sum = (a, b) => a + b
 console.log(sum(8, 3));
