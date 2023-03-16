@@ -10,4 +10,4 @@ exports.abs = function (number) {
 // 원의 넓이를 구하는 메서드
 exports.circleArea = function (radius) {
   return radius * radius * Math.PI;
-}
+};
