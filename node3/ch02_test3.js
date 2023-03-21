@@ -11,5 +11,5 @@ process.argv.forEach(function(item, index) { // index, item은 변수
   console.log(index + ' : ', item);
 });
 
-// console.dir(process.env);
-// console.log('os 환경변수의 값 : ' + process.env['os']);
+console.dir(process.env);
+console.log('os 환경변수의 값 : ' + process.env['os']);
