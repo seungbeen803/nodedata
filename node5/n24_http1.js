@@ -3,13 +3,16 @@
 // -> createServer() 메서드를 호출하면 서버 객체 생성 가능함
 
 // 1) createServer() 호출 -> 서버 객체 생성
-// 2) listen()를 호출하면 웹서버가 시작되고 특정 포트(3000번)에서 대기함
+// 2) listen()를 호출하면 웹 서버가 시작되고 특정 포트(3000번)에서 대기함
 
 let http = require('http');
 
 let server = http.createServer();
 
-let port = 3000;
-server.listen(port, function() {
-  console.log('웹 서버가 시작되었습니다. : %d', port);
+let host = '10.96.124.139'; // ip주소
+let port = 3000; // port 지정
+
+// 서버를 실행
+server.listen(port, host, '50000', function() {
+  console.log('웹 서버가 시작되었습니다. : %s, %d', host, port);
 });
