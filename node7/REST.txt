@@ -14,3 +14,16 @@ POST : 서버에 자원을 새로 등록하고자 할 때 사용(또는 뭘 써�
 PUT : 서버의 자원을 요청에 들어있는 자원으로 치환하고자 할 때 사용
 PATCH : 서버 자원의 일부만 수정하고자 할 때 사용
 DELETE : 서버의 자원을 삭제하고자 할 때 사용
+
+RESTful
+REST API를 사용한 주소 체계를 이용하는 서버를 'RESTful 하다'표현
+GET메서드의 /user는 사용자를 조회하는 요청, POST메서드의 /user는 사용자를 등록하는 요청
+
+HTTP메서드    주소                   역할
+GET            /          restFront.html 파일 제공
+GET            /about       about.html 파일 제공
+GET            /users         사용자 목록 제공
+GET            기타           기타 정적 파일 제공
+POST           /users            사용자 등록
+PUT         /users/사용자id   해당 id의 사용자 수정
+DELETE      /users/사용자id   해당 id의 사용자 제거
