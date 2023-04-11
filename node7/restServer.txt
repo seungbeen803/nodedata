@@ -1,0 +1,16 @@
+DB대용으로 users라는 객체를 선언해 사용자 정보를 저장
+POST/users 요청 : 사용자를 새로 저장
+PUT/users/아이디 요청 : 해당 아이디의 사용자 데이터를 수정
+DELETE/users/아이디 요청 : 해당 아이디의 사용자 제거
+
+POST, PUT 요청 처리시 req.on('data'),req.on('end')를 사용하여 요청의 본문에 있는 데이터를 꺼냄.
+
+REST방식으로 주소를 만들어서 주소와 메서드만 보면 요청내용 유추 가능
+Name : 요청 주소,  Method : 요청 메서드, Status : HTTP 응답코드, Type : 요청의 종류
+
+POST/users : 사용자 등록하는 요청
+DELETE/users/1505550586127 : 해당 키를 가진 사용자를 제거하는 요청
+수정, 삭제, 등록 발생할 때마다 GET/users로 갱신된 사용자 정보를 가져옴.
+General : 공통된 헤더, Request Headers : 요청의 헤더값
+Response Headers : 응답의 헤더, Payload :  요청의 본문 표시됨.
+Preview, Response : 응답의 본문
