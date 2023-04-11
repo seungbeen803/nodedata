@@ -47,7 +47,7 @@ http.createServer((req, res) => {
       });
     }
   } else if (req.method === 'PUT') { // 해당 id의 사용자 수정
-    if (req.url.startsWith('/users/')) {
+    if (req.url.startsWith('/users/')) { 
       const key = req.url.split('/')[2]; // 해당 id 분리
       let body = '';
       req.on('data', (data) => {
