@@ -13,7 +13,12 @@ app.get('/', (req, res) => {
   }
   res.send(result);
 });
-
+// 미들웨어를 설정합니다.
+app.use(function (request, response, next) {
+  // 응답합니다.
+  // 상태코드만 전달할 때는 response.sendStatus(404) 사용
+  response.status(404).send('<h1>ERROR</h1>');
+})
 app.get('/error', (req, res) => {
   res.status(404).send('404 ERROR');
 });
