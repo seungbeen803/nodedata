@@ -5,6 +5,7 @@ var express = require('express');
 // 서버를 생성합니다
 var app = express();
 
+// 요청과 응답사이의 함수를 미들웨어라고 한디
 // 미들웨어를 설정합니다
 app.use(function (request, response) {
     // User-Agent 속성을 추출합니다
