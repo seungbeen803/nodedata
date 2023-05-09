@@ -12,9 +12,13 @@ var app = express();
 // - 지정한 파라미터는 reqest.params 객체 안에 들어감
 // - userId로 표시된 부분에 넣어 전달된 값은 request.params.name  속성으로 접근 가능 -> 토큰(token)
 app.get('/users/:userId/:bookId', function (request, response) {
-  let user = request.params.userId;
-  let book = request.params.bookId;
-  response.send('<h1>' + user + book + ' Page</h1>');
+  // 1) 변수 선언
+  // let user = request.params.userId;
+  // let book = request.params.bookId;
+  // response.send('<h1>' + user + book + ' Page</h1>');
+
+  // req.params;
+  response.send(request.params); // json형식으로 추출됨
 });
 
 
