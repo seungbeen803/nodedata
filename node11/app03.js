@@ -17,7 +17,7 @@ app.get('/users/:userId/:bookId', function (request, response) {
   // let book = request.params.bookId;
   // response.send('<h1>' + user + book + ' Page</h1>');
 
-  // req.params;
+  // 2) req.params;
   response.send(request.params); // json형식으로 추출됨
 });
 
