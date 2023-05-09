@@ -6,13 +6,13 @@ var app = express();
 
 // 라우터를 설정합니다.
 app.get('/a', function (request, response) {
-  // response.send('<a href="/b">Go to B</a>');
-  response.sendFile(__dirname + '/public/a.html');
+  response.send('<a href="/b">Go to B</a>');
+  // response.sendFile(__dirname + '/public/a.html');
 });
 
 app.get('/b', function (request, response) {
-  response.send('<a href="/a">Go to A</a>');
-  // response.sendFile(__dirname + '/public/b.html');
+  // response.send('<a href="/a">Go to A</a>');
+  response.sendFile(__dirname + '/public/b.html');
 });
 
 app.all('*', function (request, response) { // 전체 선택지는 가장 마지막에 사용
