@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // urlencoded()의 옵션
 //  - extend는 중첩된 객체표현을 허용할지 말지를 정하는 것
@@ -23,9 +23,19 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  // req.body에 name, value를 객체형식으로 넣는다.
-  console.log(req.body);
-})
+  const {
+    body: { position }, // 전달받은 값이 position하나
+  } = req;
+  // 여러 값을 전달받은 경우:
+  // const { body: {position, title, description...},} = req;로
+  res.send(
+    `<script>alert("${position}");
+    window.location.href = "/";
+    </script>`
+    // 알림창이 뜨면서 확인 클릭 시 "localhost:3000/"으로 이동
+  );
+});
+
 
 app.listen(3000, () => {
   console.log('3000 포트에서 서버 시작');
